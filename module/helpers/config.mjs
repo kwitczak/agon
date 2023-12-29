@@ -1,23 +1,23 @@
-export const BOILERPLATE = {};
+export const AGON = {};
 
 /**
  * The set of Ability Scores used within the sytem.
  * @type {Object}
  */
- BOILERPLATE.abilities = {
-  "str": "BOILERPLATE.AbilityStr",
-  "dex": "BOILERPLATE.AbilityDex",
-  "con": "BOILERPLATE.AbilityCon",
-  "int": "BOILERPLATE.AbilityInt",
-  "wis": "BOILERPLATE.AbilityWis",
-  "cha": "BOILERPLATE.AbilityCha"
+ AGON.abilities = {
+  "str": "AGON.AbilityStr",
+  "dex": "AGON.AbilityDex",
+  "con": "AGON.AbilityCon",
+  "int": "AGON.AbilityInt",
+  "wis": "AGON.AbilityWis",
+  "cha": "AGON.AbilityCha"
 };
 
-BOILERPLATE.abilityAbbreviations = {
-  "str": "BOILERPLATE.AbilityStrAbbr",
-  "dex": "BOILERPLATE.AbilityDexAbbr",
-  "con": "BOILERPLATE.AbilityConAbbr",
-  "int": "BOILERPLATE.AbilityIntAbbr",
-  "wis": "BOILERPLATE.AbilityWisAbbr",
-  "cha": "BOILERPLATE.AbilityChaAbbr"
+AGON.abilityAbbreviations = {
+  "str": "AGON.AbilityStrAbbr",
+  "dex": "AGON.AbilityDexAbbr",
+  "con": "AGON.AbilityConAbbr",
+  "int": "AGON.AbilityIntAbbr",
+  "wis": "AGON.AbilityWisAbbr",
+  "cha": "AGON.AbilityChaAbbr"
 };
