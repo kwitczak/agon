@@ -16,8 +16,8 @@
   "media": [
     {
       "type": "setup",
-      "url": "systems/agon/assets/anvil-impact.png",
-      "thumbnail": "systems/agon/assets/anvil-impact.png"
+      "url": "systems/agon/assets/agon-logo.png",
+      "thumbnail": "systems/agon/assets/agon-logo.png"
     }
   ],
   "version": "1.3.0",
@@ -37,11 +37,11 @@
   "packs": [],
   "packFolders": [],
   "socket": false,
-  "manifest": "Replace this with a link to the /latest release system.json so people can receive updates after they've installed the system",
+  "manifest": "https://github.com/kwitczak/agon/blob/main/system.json",
   "download": "This must link to a .zip file of the current version",
-  "background": "systems/agon/assets/anvil-impact.png",
+  "background": "systems/agon/assets/agon-background.avif",
   "gridDistance": 5,
   "gridUnits": "m",
-  "primaryTokenAttribute": "health",
-  "secondaryTokenAttribute": "power"
+  "primaryTokenAttribute": "pathos",
+  "secondaryTokenAttribute": "fate"
 }

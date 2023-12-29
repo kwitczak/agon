@@ -27,4 +27,5 @@ SOFTWARE.
 
 IMAGE LICENSES
 
-anvil-impact.png by Lorc under CC BY 3.0 from game-icons.net
+// TODO:
+agon-logo.png by ...

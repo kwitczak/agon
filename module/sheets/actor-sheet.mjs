@@ -39,10 +39,10 @@ export class AgonActorSheet extends ActorSheet {
     context.system = actorData.system;
     context.flags = actorData.flags;
 
-    // Prepare character data and items.
-    if (actorData.type == 'character') {
+    // Prepare hero data and items.
+    if (actorData.type == 'hero') {
       this._prepareItems(context);
-      this._prepareCharacterData(context);
+      this._prepareHeroData(context);
     }
 
     // Prepare NPC data and items.
@@ -60,13 +60,13 @@ export class AgonActorSheet extends ActorSheet {
   }
 
   /**
-   * Organize and classify Items for Character sheets.
+   * Organize and classify Items for Hero sheets.
    *
    * @param {Object} actorData The actor to prepare.
    *
    * @return {undefined}
    */
-  _prepareCharacterData(context) {
+  _prepareHeroData(context) {
     // Handle ability scores.
     for (let [k, v] of Object.entries(context.system.abilities)) {
       v.label = game.i18n.localize(CONFIG.AGON.abilities[k]) ?? k;
@@ -74,7 +74,7 @@ export class AgonActorSheet extends ActorSheet {
   }
 
   /**
-   * Organize and classify Items for Character sheets.
+   * Organize and classify Items for Hero sheets.
    *
    * @param {Object} actorData The actor to prepare.
    *

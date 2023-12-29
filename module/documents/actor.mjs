@@ -25,7 +25,7 @@ export class AgonActor extends Actor {
    * you'll want to handle most of your calculated/derived data in this step.
    * Data calculated in this step should generally not exist in template.json
    * (such as ability modifiers rather than ability scores) and should be
-   * available both inside and outside of character sheets (such as if an actor
+   * available both inside and outside of hero sheets (such as if an actor
    * is queried and has a roll executed directly from it).
    */
   prepareDerivedData() {
@@ -33,17 +33,17 @@ export class AgonActor extends Actor {
     const systemData = actorData.system;
     const flags = actorData.flags.agon || {};
 
-    // Make separate methods for each Actor type (character, npc, etc.) to keep
+    // Make separate methods for each Actor type (hero, npc, etc.) to keep
     // things organized.
-    this._prepareCharacterData(actorData);
+    this._prepareHeroData(actorData);
     this._prepareNpcData(actorData);
   }
 
   /**
-   * Prepare Character type specific data
+   * Prepare Hero type specific data
    */
-  _prepareCharacterData(actorData) {
-    if (actorData.type !== 'character') return;
+  _prepareHeroData(actorData) {
+    if (actorData.type !== 'hero') return;
 
     // Make modifications to data here. For example:
     const systemData = actorData.system;
@@ -72,18 +72,18 @@ export class AgonActor extends Actor {
   getRollData() {
     const data = super.getRollData();
 
-    // Prepare character roll data.
-    this._getCharacterRollData(data);
+    // Prepare hero roll data.
+    this._getHeroRollData(data);
     this._getNpcRollData(data);
 
     return data;
   }
 
   /**
-   * Prepare character roll data.
+   * Prepare Hero roll data.
    */
-  _getCharacterRollData(data) {
-    if (this.type !== 'character') return;
+  _getHeroRollData(data) {
+    if (this.type !== 'hero') return;
 
     // Copy the ability scores to the top level, so that rolls can use
     // formulas like `@str.mod + 4`.
@@ -94,9 +94,9 @@ export class AgonActor extends Actor {
     }
 
     // Add level for easier access, or fall back to 0.
-    if (data.attributes.level) {
-      data.lvl = data.attributes.level.value ?? 0;
-    }
+    // if (data.attributes.level) {
+    //   data.lvl = data.attributes.level.value ?? 0;
+    // }
   }
 
   /**

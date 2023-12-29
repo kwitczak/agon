@@ -4,6 +4,8 @@
   <header class="sheet-header">
     <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="100" width="100"/>
     <div class="header-fields">
+      <h1 class="charname"><input name="epithet" type="text" value="{{system.names.epithet.value}}" placeholder="Epithet"/></h1>
+      <h1 class="charname"><input name="epithet-dice" type="text" value="{{system.names.epithet.dice}}" placeholder="Epithet"/></h1>
       <h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="Name"/></h1>
       {{!-- The grid classes are defined in scss/global/_grid.scss. To use,
       use both the "grid" and "grid-Ncol" class where "N" can be any number
@@ -14,27 +16,27 @@
         and it will add a small amount of padding, a border, and will
         center all of its child elements content and text. --}}
         <div class="resource flex-group-center">
-          <label for="system.health.value" class="resource-label">Health</label>
+          <label for="system.pathos.value" class="resource-label">Pathos</label>
           <div class="resource-content flexrow flex-center flex-between">
-          <input type="text" name="system.health.value" value="{{system.health.value}}" data-dtype="Number"/>
+          <input type="text" name="system.pathos.value" value="{{system.pathos.value}}" data-dtype="Number"/>
           <span> / </span>
-          <input type="text" name="system.health.max" value="{{system.health.max}}" data-dtype="Number"/>
+          <input type="text" name="system.pathos.max" value="{{system.pathos.max}}" data-dtype="Number"/>
           </div>
         </div>
 
         <div class="resource flex-group-center">
-          <label for="system.power.value" class="resource-label">Power</label>
+          <label for="system.fate.value" class="resource-label">Fate</label>
           <div class="resource-content flexrow flex-center flex-between">
-          <input type="text" name="system.power.value" value="{{system.power.value}}" data-dtype="Number"/>
+          <input type="text" name="system.fate.value" value="{{system.fate.value}}" data-dtype="Number"/>
           <span> / </span>
-          <input type="text" name="system.power.max" value="{{system.power.max}}" data-dtype="Number"/>
+          <input type="text" name="system.fate.max" value="{{system.fate.max}}" data-dtype="Number"/>
           </div>
         </div>
 
         <div class="resource flex-group-center">
-          <label for="system.attributes.level.value" class="resource-label">Level</label>
+          <label for="system.attributes.glory.value" class="resource-label">Glory</label>
           <div class="resource-content flexrow flex-center flex-between">
-          <input type="text" name="system.attributes.level.value" value="{{system.attributes.level.value}}" data-dtype="Number"/>
+          <input type="text" name="system.attributes.glory.value" value="{{system.attributes.glory.value}}" data-dtype="Number"/>
           </div>
         </div>
 

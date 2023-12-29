@@ -1,26 +1,32 @@
 {
   "Actor": {
-    "types": ["character", "npc"],
+    "types": ["hero", "npc"],
     "templates": {
       "base": {
-        "health": {
-          "value": 10,
-          "min": 0,
-          "max": 10
-        },
-        "power": {
-          "value": 5,
+        "pathos": {
+          "value": 0,
           "min": 0,
           "max": 5
+        },
+        "fate": {
+          "value": 0,
+          "min": 0,
+          "max": 12
         },
         "biography": ""
       }
     },
-    "character": {
+    "hero": {
       "templates": ["base"],
+      "names": {
+        "epithet": {
+          "value": "",
+          "dice": "1d6"
+        }
+      },
       "attributes": {
-        "level": {
-          "value": 1
+        "glory": {
+          "value": 0
         }
       },
       "abilities": {
